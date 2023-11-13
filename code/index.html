@@ -8,9 +8,29 @@
 </head>
 
 <body>
-  <!-- <script src="./pizzabot.js" charset="utf-8"></script> -->
-  <script src="functions_pizzabot.js"></script>
-  Edit pizzabot.js to complete this assignment.
+  <div class="center" id="center">
+    <img class="circleText" src="images/text_circle_small.png" alt="">
+    <div class="circle">
+    </div>
+    <form class="myForm" onsubmit="event.preventDefault()" action="" id="pizzaForm">
+      <label class="heading" for="orderName">PIZZA MENU</label>
+      <select name="orderName" id="orderName">
+        <option value=""></option>
+        <option value="Vegetarian Pizza">Vegetarian Pizza</option>
+        <option value="Hawaiian Pizza">Hawaiian Pizza</option>
+        <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+      </select>
+
+      <label class="heading" for="orderQuantity">HOW MANY DO YOU WANT?</label>
+      <input id="orderQuantity" type="number" min="1">
+
+      <button id="sendOrder">SEND ORDER</button>
+    </form>
+  </div>
+
+  <!-- <script src="alert_pizzabot.js"></script> -->
+  <!-- <script src="functions_pizzabot.js"></script> -->
+  <script src="form_pizzabot.js"></script>
 </body>
 
 </html>
