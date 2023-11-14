@@ -61,8 +61,10 @@ function getOrder() {
     const orderNameEl = document.getElementById("orderName").value;
 
     const orderQuantityEl = parseInt(document.getElementById("orderQuantity").value);
-
-    return `Great, I'll get started on your ${orderNameEl} right away, it will cost ${price(orderQuantityEl, pizzaPrice)} kr. Your order will be ready in ${cookingTime(orderQuantityEl)} minutes!`;
-
+    if (orderQuantityEl === 1) {
+        return `Your order is comig right up! \n ${orderQuantityEl} ${orderNameEl} will be ready in ${cookingTime(orderQuantityEl)} minutes. It will cost ${price(orderQuantityEl, pizzaPrice)} kr. See you soon!`;
+    } else {
+        return `Your order is coming right up! \n ${orderQuantityEl} ${orderNameEl}s will be ready in ${cookingTime(orderQuantityEl)} minutes. It will cost ${price(orderQuantityEl, pizzaPrice)} kr. See you soon!`;
+    }
 }
 
